@@ -17,7 +17,7 @@ class ClientFactory implements AbstractFactoryInterface
     {
         $apiConfig = $serviceLocator->get('CallFire\Config\Api');
         
-        $clientServiceName = substr($requestedName, strlen($apiConfig->getClientNamespace()) + 2);
+        $clientServiceName = substr($requestedName, strlen($apiConfig->getClientNamespace()) + 1);
         $facade = $apiConfig->getClientFacade();
         $clientType = $apiConfig->getClientType();
         
